@@ -1,261 +1,104 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        body {
-            background: #001b0b;
-            color: #fff;
-            font-family: Tahoma, Arial;
-        }
-
-        #contenedor {
-            width: 960px;
-            margin: auto;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 20px;
-            overflow: hidden;
-            background: #222;
-            padding: 20px;
-        }
-
-        header {
-            height: 200px; 
-            background: #145a32;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo {
-            width: 250px; 
-            height: 125px;
-            background: url('https://th.bing.com/th/id/OIP.iDjMdKDkrdr36YuRmeAjdwHaHw?w=184&h=192&c=7&r=0&o=5&dpr=1.2&pid=1.7') no-repeat center center;
-            background-size: contain; 
-            margin-bottom: 10px; 
-        }
-
-        .icono {
-            font-size: 50px;
-            color: white;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-        .slider {
-        position: relative;
-        width: 100%;
-        max-width: 960;
-        height: 400px;
-        overflow: hidden;
-        margin: auto;
-        border-radius: 10px;
-        }
-
-        .slider-container {
-        display: flex;
-        width: 300%;
-        transition: transform 0.5s ease-in-out;
-       }
-
-       .slider img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-       }
-
-       button {
-       position: absolute;
-       top: 50%;
-       transform: translateY(-50%);
-       background: rgba(0, 0, 0, 0.5);
-       color: white;
-       border: none;
-       padding: 10px;
-       cursor: pointer;
-       font-size: 24px;
-       }
-
-       .prev {
-       left: 10px;
-       }
-
-       .next {
-       right: 10px;
-       }
-
-        button:hover {
-        background: rgba(0, 0, 0, 0.8);
-        }
-
-        aside {
-            width: 250px;
-            height: 500px;
-            background: #f7e0f9;
-            margin-top: 10px;
-            float: right;
-        }
-        img {
-        transition: transform 0.3s ease;
-        }
-        img:hover {
-        transform: scale(1.1);
-        }
-
-        nav {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        ul.menu {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul.menu li {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        ul.menu li a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 20px;
-            display: block;
-            background: #333;
-            border-radius: 5px;
-        }
-
-        ul.menu li a:hover {
-            background: #145a32;
-        }
-
-        .contenido-wrapper {
-            display: flex; 
-            margin-top: 10px;
-        }
-
-        #contenido {
-            width: 700px;
-            height: 500px;
-            background: #186a3b;
-            margin-right: 10px;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        #contenido p {
-            font-size: 20px;
-            height: 100px;
-            padding: 10px;
-        }
-
-        aside {
-            width: 250px; 
-            background: green;
-            border-radius: 10px;
-            text-align: center;
-            padding: 10px; 
-        }
-
-        aside img {
-            width: 100%;
-            margin-top: 1px;
-            border-radius: 1000px;
-        }
-
-        footer {
-            background: #000;
-            clear: both;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        footer h2 {
-            font-size: 20px;
-            font-style: italic;
-        
-        }
-
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
-    </style>
+    <title>Minecraft</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-    <div id="contenedor">
-        <header>
-            <div class="logo"></div> 
-            <h1>Spotify</h1>
-            <div class="icono">&#9733;</div>
-        </header>
+  <body>
 
-        <div class="slider">
-        <div class="slider-container">
-        <img src="https://th.bing.com/th/id/OIP._4hXxwwPJUbijGpGMK_XiwHaEN?w=294&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7" alt="Imagen 1">
-        <img src="https://th.bing.com/th/id/OIP.9fXX7skmxN5I7oMiypfS-gHaEK?w=302&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7" alt="Imagen 2">
-        <img src="https://th.bing.com/th/id/OIP.74XZfub01yG52cOl5PYknAHaEc?w=283&h=180&c=7&r=0&o=5&dpr=1.2&pid=1.7" alt="Imagen 3">
-        </div>
-        <button class="prev" onclick="moverSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moverSlide(1)">&#10095;</button>
-    </div>
+<header>
+  <!--LOGO-->
+     <section id="logo">
+           <a href="index.html"><img src="imagenes/logo.png" alt="logo"></a>
 
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="Productos.............">Productos</a></li>
-                <li><a href="w.html">Servicios</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Contacto</a></li>
+     </section>
+  <!--LOGO-->
+</header>
+<!--MENU-HORIZONTAL-->
+<nav id="menu-h">
+       <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Quienes somos</a>
+              <ul class="submenu">
+                     <li><a href="#">Sobre nosotros</a></li>
+                     <li><a href="#">Visión</a></li>
+                     <li><a href="#">Misión</a></li>
+
+              </ul>
+            </li>
+            <li><a href="#">Servicios</a>
+             <ul class="submenu">
+                     <li><a href="#">Sobre nosotros</a></li>
+                     <li><a href="#">Visión</a></li>
+                     <li><a href="#">Misión</a></li>
+
+              </ul>
+            </li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Garantia</a></li>
+            <li><a href="#">Contáctenos</a></li>
+       </ul>
+
+
+</nav>
+<!--MENU-HORIZONTAL-->
+
+
+<!--BANNER-->
+<section id="banner">
+       <img src="imagenes/mine.webp" alt="mine">
+</section>
+<!--BANNER-->
+
+
+
+<section id="contenedor">
+
+
+<section id="menu-p">
+
+
+
+
+       <!--MENU-VERTICAL-->
+       <nav id="menu-v">
+              <ul>
+                  <li><a href="#"><img src="imagenes/inicio.png">    </a>Inicio</li>
+                  <li><a href="#"><img src="imagenes/servicios.png">    </a>Servicios</li>
+                  <li><a href="#"><img src="imagenes/productos.png">    </a>Productos</li>
+                  <li><a href="#"><img src="imagenes/ubicanos.png">    </a>Ubícanos</li>
+                  <li><a href="#"><img src="imagenes/contactenos.png">    </a>Contáctenos</li>
             </ul>
-        </nav>
+      </nav>
+       <!--MENU-VERTICAL-->
 
-        <div class="contenido-wrapper">
-            <section id="contenido">
-                <article>
-                    <p>Spotify es una de las plataformas de streaming de música más prominentes del mundo, fundada en 2006 en Suecia por Daniel Ek y Martin Lorentzon. Desde su lanzamiento, ha revolucionado la manera en que consumimos música al ofrecer una vasta biblioteca que incluye millones de canciones, álbumes, y podcasts, disponibles al alcance de un clic. La plataforma permite a los usuarios crear y compartir listas de reproducción personalizadas, descubrir nueva música a través de recomendaciones basadas en algoritmos avanzados y disfrutar de contenido exclusivo de artistas y creadores de todo el mundo. Además, Spotify ofrece diferentes modalidades de suscripción, que van desde una versión gratuita con publicidad, hasta planes premium que eliminan anuncios y permiten la descarga de música para escucharla sin conexión. Spotify también ha incursionado en el ámbito de los podcasts, alojando una amplia gama de temas y géneros que enriquecen la experiencia auditiva de sus usuarios. Con su interfaz amigable y su constante innovación, Spotify se ha establecido como un pilar fundamental en el ecosistema musical global, conectando a millones de personas con la música que aman y brindando una plataforma para que los artistas lleguen a una audiencia mundial.</p>
-                </article>
-            </section>
+<!--CONTENIDO-->
+<section id="contenido">
+    <h2>Minecraft un mundo sin límites</h2>
+    <img src="imagenes/v.jpg" class="img-izq">
+<p>Minecraft no es solo un juego; es un viaje emocional a un universo donde tus sueños pueden cobrar vida. Desde su lanzamiento en 2011, ha tejido un hilo dorado que une a millones de jugadores en todo el mundo, creando no solo un espacio de diversión, sino un refugio para la creatividad y la autoexpresión. En este vasto mundo cúbico, cada bloque que colocas es un paso hacia la realización de tus visiones más audaces. Si alguna vez has anhelado un lugar donde la única barrera sea tu imaginación, Minecraft te espera con los brazos abiertos.</p>
 
-            <aside>
-                <img src="https://th.bing.com/th/id/R.01d4481ef37c6d90cd346ef00d6d628b?rik=J3vzm9wcFOv6pw&pid=ImgRaw&r=0" alt="Imagen de computadora">
-            </aside>
-        </div>
+<p>Imagina un mundo donde cada rincón es una aventura esperando ser descubierta. Desde desiertos abrasadores que susurran secretos antiguos, hasta bosques densos que guardan maravillas ocultas, Minecraft te invita a explorar biomas que son una celebración de la diversidad natural. Cada mundo es único, un lienzo en blanco que te ofrece un sinfín de sorpresas y oportunidades para dejar tu huella. En este viaje, te encontrarás no solo con criaturas fascinantes, sino también con paisajes que te quitarán el aliento, cada uno listo para convertirse en el escenario de tu historia personal.</p>
 
-        <footer>
-            <h2> Todos los Derechos Reservados.</h2>
-        </footer>
-    </div>
+<p>Pero Minecraft va más allá de la construcción. Te ofrece un espacio para la aventura y el desafío. En el modo supervivencia, te enfrentas a criaturas temibles, donde la astucia y la gestión de recursos son tus mejores aliados. Si sueñas con un mundo sin limitaciones, el modo creativo te permite volar alto, accediendo a todos los materiales sin preocuparte por el peligro. Esta flexibilidad hace que Minecraft sea un hogar cálido para todos, sin importar la edad o la experiencia.</p>
 
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelector('.slides');
-        const totalSlides = document.querySelectorAll('.slide').length;
 
-        function changeSlide(direction) {
-            currentSlide += direction;
-            if (currentSlide < 0) {
-                currentSlide = totalSlides - 1;
-            } else if (currentSlide >= totalSlides) {
-                currentSlide = 0;
-            }
-            slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
-        }
-    </script>
+
+</section>
+<!--CONTENIDO-->
+
+</section>
+<!--PIE DE PAGUINA-->
+<footer>
+Derechos Reservados &copy; 2025 <br>
+Diseñado por: Génesis Villalona <br>
+Email: Génesis15Villalona@gmail.com <br>
+www.Minecraft.com
+</footer>
+<!--PIE DE PAGUINA-->
+
 </body>
 </html>
+ 
